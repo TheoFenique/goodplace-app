@@ -1,12 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
 import './App.css';
-import Profiles from './views/Profiles';
+import Homepage from './views/Homepage';
+
+const StyledApp = styled.div`
+  h2 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+  }
+
+  .underTitle {
+    color: rgba(51, 51, 51, 0.6)
+  }
+`
 
 function App() {
   return (
-    <div className="App">
-      <Profiles />
-    </div>
+    <StyledApp className="App">
+      <Homepage />
+    </StyledApp>
   );
 }
 
