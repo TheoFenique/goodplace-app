@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import EventCard from './EventCard';
 
 
-let response = require('../../assets/json/MainMenu/response.json');
+let response = require('../../../assets/json/MainMenu/response.json');
 
 const StyledMenu = styled.div`
     box-sizing: border-box;
@@ -11,9 +11,9 @@ const StyledMenu = styled.div`
     position: absolute;
     padding: 40px 20px;
     top: 70%;
-    height: 90%;
+    height: fit-content;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.15);
 
     &::after {
@@ -21,9 +21,10 @@ const StyledMenu = styled.div`
         position: absolute;
         width: 100px;
         height: 4px;
-        background: rgba(51, 51, 51, 0.6);
+        background: rgba(51, 51, 51, 0.2);
         top: 16px;
         left: calc(50% - 50px);
+        border-radius: 40px;
     }
 `
 

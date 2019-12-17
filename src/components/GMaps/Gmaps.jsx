@@ -12,13 +12,13 @@ class Gmaps extends Component {
     render() {
         console.log(key)
         return (
-            <Map
+            <div style={{ position: 'fixed', width: '100vw', height: '100vh' }}><Map
                 google={this.props.google}
                 zoom={13}
                 style={mapStyles}
                 initialCenter={{ lat: 48.858616, lng: 2.347426 }}
                 disableDefaultUI={true}
-            />
+            /></div>
         );
     }
 }
