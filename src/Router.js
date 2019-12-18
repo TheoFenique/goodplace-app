@@ -11,7 +11,7 @@ const Router = () => (
             <Route exact path="/" component={App} />
             <Route exact path="/connexion" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/event" component={Event} />
+            <Route path="/events/:eventId" component={Event} />
         </Switch>
     </BrowserRouter>
 )

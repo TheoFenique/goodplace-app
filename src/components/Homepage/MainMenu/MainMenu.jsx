@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import EventCard from './EventCard';
 
@@ -36,7 +37,9 @@ class MainMenu extends Component {
                 <h2>Initiative</h2>
                 <small className="underTitle">Liste des initiatives à proximité</small>
                 {response.map((v, i, a) =>
-                    <EventCard name={v.name} date={v.date} key={i} />
+                    <Link key={v.id} to={`/events/${v.id}`}>
+                        <EventCard name={v.name} date={v.date} key={i} />
+                    </Link>
                 )}
             </StyledMenu>
         );
