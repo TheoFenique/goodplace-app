@@ -10,7 +10,7 @@ const Router = () => (
         <Switch>
             <Route exact path="/" component={App} />
             <Route exact path="/connexion" component={Login} />
-            <Route exact path="/register" component={Register} />
+            <Route exact path="/inscription" component={Register} />
             <Route path="/events/:eventId" component={Event} />
         </Switch>
     </BrowserRouter>
