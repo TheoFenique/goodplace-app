@@ -76,10 +76,6 @@ const StyledMenu = styled.div`
 }
 `
 
-const StyledDivEvent = styled.div`
-    display:flex;
-`
-
 class MainMenu extends Component {
 
     state = {
