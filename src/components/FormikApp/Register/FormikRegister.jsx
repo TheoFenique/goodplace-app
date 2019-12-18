@@ -6,11 +6,17 @@ import * as Yup from 'yup';
 const FormikConnexion = () => {
     return (
         <Formik
-            initialValues={{ id: '', password: '', email: '' }}
+            initialValues={{ prenom: '', nom: '', password: '', email: '', confirmpassword: '' }}
             validationSchema={Yup.object({
-                id: Yup.string()
+                prenom: Yup.string()
+                    .required('Obligatoire'),
+                nom: Yup.string()
+                    .required('Obligatoire'),
+                email: Yup.string()
                     .required('Obligatoire'),
                 password: Yup.string()
+                    .required('Obligatoire'),
+                confirmpassword: Yup.string()
                     .required('Obligatoire'),
             })}
             onSubmit={(values, { setSubmitting }) => {
@@ -22,27 +28,27 @@ const FormikConnexion = () => {
         >
             <Form>
                 <div>
-                    <label htmlFor="prenom">First Name</label>
+                    <label htmlFor="prenom">Prénom</label>
                     <Field name="prenom" type="text" />
                     <ErrorMessage name="prenom" />
                 </div>
                 <div>
-                    <label htmlFor="nom">Last Name</label>
+                    <label htmlFor="nom">Nom de famille</label>
                     <Field name="nom" type="text" />
                     <ErrorMessage name="nom" />
                 </div>
                 <div>
-                    <label htmlFor="email">Last Name</label>
+                    <label htmlFor="email">Email ou identifiant</label>
                     <Field name="email" type="text" />
                     <ErrorMessage name="email" />
                 </div>
                 <div>
-                    <label htmlFor="password">Last Name</label>
+                    <label htmlFor="password">Mot de passe</label>
                     <Field name="password" type="text" />
                     <ErrorMessage name="password" />
                 </div>
                 <div>
-                    <label htmlFor="confirmpassword">Last Name</label>
+                    <label htmlFor="confirmpassword">Confirmation du mot de passe</label>
                     <Field name="confirmpassword" type="text" />
                     <ErrorMessage name="confirmpassword" />
                 </div>
