@@ -22,14 +22,29 @@ const FormikConnexion = () => {
         >
             <Form>
                 <div>
-                    <label htmlFor="id">Identifiant ou email</label>
-                    <Field name="id" type="text" />
-                    <ErrorMessage name="id" />
+                    <label htmlFor="prenom">First Name</label>
+                    <Field name="prenom" type="text" />
+                    <ErrorMessage name="prenom" />
                 </div>
                 <div>
-                    <label htmlFor="password">Mot de passe</label>
+                    <label htmlFor="nom">Last Name</label>
+                    <Field name="nom" type="text" />
+                    <ErrorMessage name="nom" />
+                </div>
+                <div>
+                    <label htmlFor="email">Last Name</label>
+                    <Field name="email" type="text" />
+                    <ErrorMessage name="email" />
+                </div>
+                <div>
+                    <label htmlFor="password">Last Name</label>
                     <Field name="password" type="text" />
                     <ErrorMessage name="password" />
+                </div>
+                <div>
+                    <label htmlFor="confirmpassword">Last Name</label>
+                    <Field name="confirmpassword" type="text" />
+                    <ErrorMessage name="confirmpassword" />
                 </div>
                 <button type="submit">Submit</button>
             </Form>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import leftarrowlogo from '../../assets/image/Register/left-arrow.svg'
 import styled from 'styled-components';
+import leftarrowlogo from '../../assets/image/Register/left-arrow.svg';
 import Button from '../../components/Button';
+import FormikRegister from '../../components/FormikApp/Register';
 
 const StyledRegister = styled.div`
 
@@ -34,7 +35,7 @@ const StyledRegister = styled.div`
         justify-content: space-between;
     padding: 20px;
     }
-    `
+`
 class Register extends Component {
     render() {
         return (
@@ -44,13 +45,15 @@ class Register extends Component {
                         <img src={leftarrowlogo}></img>
                         <p>Quelques informations  personnelles,</p>
                     </header>
-                
-                <div className="footerButton">
-                <Button link="test" theme={false} >Confirmer</Button>
-                <Button link="test" theme={true} >Annuler</Button>
-                </div>
+                    <FormikRegister />
+
+                    <div className="footerButton">
+                        <Button link="test" theme={false} >Confirmer</Button>
+                        <Button link="test" theme={true} >Annuler</Button>
+                    </div>
+
                 </StyledRegister>
-             </div>
+            </div>
         );
     }
 }
