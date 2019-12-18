@@ -41,7 +41,7 @@ class EventCard extends Component {
     render() {
         let dist = 650;
         return (
-            <StyledEventCard>
+            <StyledEventCard onClick={this.props.HandleClick}>
                 <StyledDist>{dist}m</StyledDist>
                 <div>
                     <span><StyledDate>{this.props.date}</StyledDate></span>
