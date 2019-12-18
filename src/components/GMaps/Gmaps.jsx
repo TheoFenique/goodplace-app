@@ -10,7 +10,6 @@ const mapStyles = {
 
 class Gmaps extends Component {
     render() {
-        console.log(key)
         return (
             <div style={{ position: 'fixed', width: '100vw', height: '100vh' }}><Map
                 google={this.props.google}

@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
 import Gmaps from '../../components/GMaps';
-import MainMenu from '../../components/Homepage/MainMenu';
 import Search from '../../components/Homepage/Search';
+import MainMenu from '../../components/MainMenu';
 import Sidebar from '../../components/Sidebar';
 
 
-class Homepage extends Component {
+class Event extends Component {
 
     state = {
-        SideBarStatus: true,
+        SideBarStatus: false,
     }
 
     ChangeStatus = () => {
         this.setState({ SideBarStatus: !this.state.SideBarStatus })
-        console.log(this.state.SideBarStatus)
     }
+
+    componentDidMount() {
+        console.log(this.props)
+    }
+
 
     render() {
         return (
             <React.Fragment>
-                <Sidebar ChangeStatus={this.ChangeStatus} status={this.state.SideBarStatus} />
+                <Sidebar status={this.state.SideBarStatus} />
                 <Search ChangeStatus={this.ChangeStatus} />
                 <Gmaps />
-                <MainMenu />
+                <MainMenu SingleEvent={true} />
             </React.Fragment>
         );
     }
 }
 
-export default Homepage;
+export default Event;
