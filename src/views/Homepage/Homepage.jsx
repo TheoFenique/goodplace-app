@@ -19,7 +19,7 @@ class Homepage extends Component {
     render() {
         return (
             <React.Fragment>
-                <Sidebar status={this.state.SideBarStatus} />
+                <Sidebar ChangeStatus={this.ChangeStatus} status={this.state.SideBarStatus} />
                 <Search ChangeStatus={this.ChangeStatus} />
                 <Gmaps />
                 <MainMenu SingleEvent={false} />

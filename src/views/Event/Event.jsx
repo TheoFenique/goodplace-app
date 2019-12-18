@@ -8,12 +8,11 @@ import Sidebar from '../../components/Sidebar';
 class Event extends Component {
 
     state = {
-        SideBarStatus: true,
+        SideBarStatus: false,
     }
 
     ChangeStatus = () => {
         this.setState({ SideBarStatus: !this.state.SideBarStatus })
-        console.log(this.state.SideBarStatus)
     }
 
     componentDidMount() {

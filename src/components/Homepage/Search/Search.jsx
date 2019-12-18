@@ -34,6 +34,11 @@ const StyledSearch = styled.div`
             justify-content: space-between;
             box-shadow: none;
             border: none;
+
+            &:focus {
+                outline: none;
+            }
+            
             div {
                 width: 23px;
                 height: 2px;
