@@ -33,7 +33,7 @@ class Button extends Component {
     render() {
         return (
             <StyledButtonRegister>
-                <a class={this.props.theme ? "white" : "blue"} href={this.props.link} type="button">
+                <a className={this.props.theme ? "white" : "blue"} href={this.props.link} type="button">
                     {this.props.children}
                 </a>
             </StyledButtonRegister>

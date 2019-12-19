@@ -11,7 +11,6 @@ const StyledHeader = styled.header`
     background-image: url(${road});
     background-position: center;
     background-size: 120%;
-    
     h1 {
         position: absolute;
         bottom: 0;
@@ -47,6 +46,8 @@ const StyledHeader = styled.header`
     }
 `
 
+
+
 class Login extends Component {
     render() {
         return (
@@ -57,7 +58,7 @@ class Login extends Component {
                     <div className="gradient-bg"></div>
                 </StyledHeader>
                 <FormikConnexion />
-                <p>Vous n'avez pas de compte ?<a href="/inscription">Cliquez ici.</a></p>
+                <p style={{fontSize: "14px", padding: "20px", color: "#333333", textAlign: "center"}}>Vous n'avez pas de compte ?<a style={{fontSize: "14px", color: "#3498DB", textDecoration:"none", marginLeft:"5px"}}href="/inscription">Cliquez ici.</a></p>
             </div>
         );
     }

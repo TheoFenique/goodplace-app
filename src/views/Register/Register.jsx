@@ -82,7 +82,7 @@ class Register extends Component {
                     <FormikRegister HandleCheckbox={this.HandleCheckbox} />
 
                     <div className="footerButton">
-                        <Button link="test" theme={false} >Confirmer</Button>
+                        <Button link="/" theme={false} >Confirmer</Button>
                         <Button link="connexion" theme={true} >Annuler</Button>
                     </div>
 

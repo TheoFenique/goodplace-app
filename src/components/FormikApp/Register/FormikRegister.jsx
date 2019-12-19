@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import * as Yup from 'yup';
 
-const StyledFormikConnexion = styled.div`
+const StyledFormikRegister= styled.div`
 padding-left:20px;
 padding-right: 20px;
 textarea:focus, input:focus{
@@ -24,7 +24,7 @@ input{
     border: 1px solid #CACACA;
     border-radius: 10px;
     height:6vh;
-    width:100%;
+    width: calc(100% - 10px);
     padding-left:10px;
     font-size:14px;
     ::placeholder{
@@ -79,7 +79,7 @@ const FormikConnexion = () => {
                 }, 400);
             }}
         >
-            <StyledFormikConnexion>
+            <StyledFormikRegister>
             <Form>
             <div>
                     <label htmlFor="nom">Nom</label>
@@ -118,7 +118,7 @@ const FormikConnexion = () => {
                     </div>
                 {/* <Button link="test" theme={false} >Confirmer</Button> */}
             </Form>
-            </StyledFormikConnexion>
+            </StyledFormikRegister>
         </Formik>
     );
 };
