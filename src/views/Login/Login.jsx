@@ -57,7 +57,7 @@ class Login extends Component {
                     <div className="gradient-bg"></div>
                 </StyledHeader>
                 <FormikConnexion />
-                <p>Vous nn'avez pas de compte ?<a href="/register">Cliquez ici.</a></p>
+                <p>Vous n'avez pas de compte ?<a href="/inscription">Cliquez ici.</a></p>
             </div>
         );
     }

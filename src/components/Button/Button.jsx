@@ -12,6 +12,10 @@ const StyledButtonRegister = styled.div`
     align-items:center;
     justify-content:center;
     border-radius:10px;
+    @media screen and (max-height:600px ) {
+            font-size:12px;
+            height:40px;
+        } 
     }
 
     .white {

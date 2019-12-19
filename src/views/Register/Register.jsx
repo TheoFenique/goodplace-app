@@ -5,35 +5,59 @@ import Button from '../../components/Button';
 import FormikRegister from '../../components/FormikApp/Register';
 
 const StyledRegister = styled.div`
-
+display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height:100vh;
+   
     header{
         background-color: #3498DB;
-        height:150px;
+        height:130px;
         display:flex;
         flex-direction: column;
         justify-content:center;
         align-items:center;
+        @media screen and (max-height:680px ) {
+            height:110px;
+        } 
+        @media screen and (max-height:600px ) {
+            height:100px;
+        } 
         p{
             color:white;
             font-weight:bold;
-            font-size:1.4rem;
+            font-size:22px;
             margin-top:0;
             width: calc(100% - 40px);
             margin-bottom: 10px;
             max-width: 370px;
+            @media screen and (max-height:680px ) {
+        font-size:18px;
+        } 
+        @media screen and (max-height:600px ) {
+        font-size:16px;
+        } 
         }
+        a{
+            align-self: baseline;
         img{
             height:25px;
-            align-self: baseline;
             margin-left: 20px;
             margin-bottom: 20px;
+            @media screen and (max-height:680px ) {
+        margin-bottom:10px;
+        } 
+    }
         }
     }
     .footerButton{
         display:flex;
         justify-content:center;
         justify-content: space-between;
-    padding: 20px;
+       padding-left: 20px;
+       padding-right: 20px;
+       padding-bottom:10px;
+  
     }
 `
 class Register extends Component {
@@ -42,14 +66,14 @@ class Register extends Component {
             <div>
                 <StyledRegister>
                     <header>
-                        <img src={leftarrowlogo}></img>
-                        <p>Quelques informations  personnelles,</p>
+                        <a href="connexion"> <img src={leftarrowlogo}></img></a>
+                        <p>Quelques informations <br />personnelles,</p>
                     </header>
                     <FormikRegister />
 
                     <div className="footerButton">
                         <Button link="test" theme={false} >Confirmer</Button>
-                        <Button link="test" theme={true} >Annuler</Button>
+                        <Button link="connexion" theme={true} >Annuler</Button>
                     </div>
 
                 </StyledRegister>
