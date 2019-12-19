@@ -52,9 +52,7 @@ span{
     margin-top:2vh;
 }
 
-[type=checkbox]{
-    background-color: red;
-}
+
 
 /* input::placeholder {
   color: red;

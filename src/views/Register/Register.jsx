@@ -61,6 +61,16 @@ display: flex;
     }
 `
 class Register extends Component {
+
+    state = {
+        isAssos: false,
+    }
+
+    HandleCheckbox = (_e) => {
+        console.log(_e)
+        this.setState({ isAssos: _e.target.value })
+    }
+
     render() {
         return (
             <div>
@@ -69,7 +79,7 @@ class Register extends Component {
                         <a href="connexion"> <img src={leftarrowlogo}></img></a>
                         <p>Quelques informations <br />personnelles,</p>
                     </header>
-                    <FormikRegister />
+                    <FormikRegister HandleCheckbox={this.HandleCheckbox} />
 
                     <div className="footerButton">
                         <Button link="test" theme={false} >Confirmer</Button>
